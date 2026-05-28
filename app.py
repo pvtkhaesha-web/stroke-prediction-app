@@ -340,8 +340,6 @@ with col1:
     with c1:
         age = st.number_input(
             "🎂 Age (years)",
-            min_value=0,
-            max_value=120,
             value=45,
             help="Patient's age in years"
         )
@@ -383,8 +381,6 @@ with col1:
 
         avg_glucose_level = st.number_input(
             "🩸 Avg Glucose Level (mg/dL)",
-            min_value=50.0,
-            max_value=300.0,
             value=85.0,
             step=0.1,
             help="Average glucose level in blood"
@@ -392,8 +388,6 @@ with col1:
 
         bmi = st.number_input(
             "⚖️ BMI",
-            min_value=10.0,
-            max_value=60.0,
             value=25.0,
             step=0.1,
             help="Body Mass Index"
