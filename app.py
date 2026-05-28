@@ -15,21 +15,27 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 # ============================================================
-# CUSTOM TEXT AND THEME VISIBILITY STYLING (COPY & PASTE)
+# CUSTOM TEXT AND THEME VISIBILITY STYLING 
 # ============================================================
 st.markdown("""
 <style>
-    /* 1. Force the dark background gradient */
+    /* 1. Force the dark background gradient for the main app */
     .stApp {
         background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
     }
     
-    /* 2. Make main page headings, labels, and paragraph text bright white */
-    .stApp p, .stApp label, .stApp span, .stApp h1, .stApp h2, .stApp h3, .stApp h4 {
+    /* 2. Force the sidebar background to match your clean dark theme */
+    section[data-testid="stSidebar"] {
+        background-color: #0f172a !important;
+    }
+    
+    /* 3. Make main page and sidebar titles, labels, and paragraph text bright white */
+    .stApp p, .stApp label, .stApp span, .stApp h1, .stApp h2, .stApp h3, .stApp h4,
+    section[data-testid="stSidebar"] p, section[data-testid="stSidebar"] label, section[data-testid="stSidebar"] span {
         color: #ffffff !important;
     }
     
-    /* 3. FIX: Keep text INSIDE dropdown boxes and inputs completely dark and visible */
+    /* 4. Keep text INSIDE dropdown boxes and inputs completely dark and visible */
     div[data-baseweb="select"] *, 
     div[role="listbox"] *, 
     .stSelectbox div, 
@@ -37,7 +43,7 @@ st.markdown("""
         color: #1e293b !important;
     }
 
-    /* 4. Ensure radio button labels (Yes/No circles) stay white on the page */
+    /* 5. Ensure radio button labels (Yes/No circles) stay white on the page */
     div[data-testid="stMarkdownContainer"] p {
         color: #ffffff !important;
     }
