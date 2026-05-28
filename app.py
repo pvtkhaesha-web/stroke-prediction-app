@@ -14,7 +14,27 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
-
+# ============================================================
+# CUSTOM TEXT AND THEME VISIBILITY STYLING (ADD THIS CODE)
+# ============================================================
+st.markdown("""
+<style>
+    /* Force the beautiful dark background gradient you created */
+    .stApp {
+        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    }
+    
+    /* Make EVERY single piece of text, labels, and descriptions bright white */
+    .stApp p, .stApp label, .stApp span, .stApp div, .stApp h1, .stApp h2, .stApp h3, .stApp h4 {
+        color: #ffffff !important;
+    }
+    
+    /* Ensure markdown lists and simple text fields don't turn dark */
+    .stMarkdown div p {
+        color: #ffffff !important;
+    }
+</style>
+""", unsafe_allow_html=True)
 # ============================================================
 # LOAD MODEL AND PREPROCESSING ARTIFACTS
 # ============================================================
