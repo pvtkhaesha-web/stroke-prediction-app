@@ -15,22 +15,30 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 # ============================================================
-# CUSTOM TEXT AND THEME VISIBILITY STYLING (ADD THIS CODE)
+# CUSTOM TEXT AND THEME VISIBILITY STYLING (COPY & PASTE)
 # ============================================================
 st.markdown("""
 <style>
-    /* Force the beautiful dark background gradient you created */
+    /* 1. Force the dark background gradient */
     .stApp {
         background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
     }
     
-    /* Make EVERY single piece of text, labels, and descriptions bright white */
-    .stApp p, .stApp label, .stApp span, .stApp div, .stApp h1, .stApp h2, .stApp h3, .stApp h4 {
+    /* 2. Make main page headings, labels, and paragraph text bright white */
+    .stApp p, .stApp label, .stApp span, .stApp h1, .stApp h2, .stApp h3, .stApp h4 {
         color: #ffffff !important;
     }
     
-    /* Ensure markdown lists and simple text fields don't turn dark */
-    .stMarkdown div p {
+    /* 3. FIX: Keep text INSIDE dropdown boxes and inputs completely dark and visible */
+    div[data-baseweb="select"] *, 
+    div[role="listbox"] *, 
+    .stSelectbox div, 
+    input {
+        color: #1e293b !important;
+    }
+
+    /* 4. Ensure radio button labels (Yes/No circles) stay white on the page */
+    div[data-testid="stMarkdownContainer"] p {
         color: #ffffff !important;
     }
 </style>
