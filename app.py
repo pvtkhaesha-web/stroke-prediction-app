@@ -15,7 +15,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 # ============================================================
-# CUSTOM TEXT AND THEME VISIBILITY STYLING (REPLACE ENTIRELY)
+# FINAL VISIBILITY STYLING FOR ALL BLOCKS 
 # ============================================================
 st.markdown("""
 <style>
@@ -24,28 +24,28 @@ st.markdown("""
         background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
     }
     
-    /* 2. Force the sidebar background to match your clean dark theme */
+    /* 2. Force the sidebar background to match your dark theme */
     section[data-testid="stSidebar"] {
         background-color: #0f172a !important;
     }
     
-    /* 3. Make main page and sidebar titles, labels, paragraph text, AND bullet points bright white */
+    /* 3. UNIVERSAL WHITE TEXT: Force headers, text fields, sidebar items, and bullets to white */
     .stApp p, .stApp label, .stApp span, .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp li,
     section[data-testid="stSidebar"] p, section[data-testid="stSidebar"] label, section[data-testid="stSidebar"] span, section[data-testid="stSidebar"] li {
         color: #ffffff !important;
     }
     
-    /* 4. Keep text INSIDE dropdown boxes and inputs completely dark and visible */
+    /* 4. DYNAMIC CARDS FIX: Force all text inside your results cards/containers to be clean white */
+    div[data-testid="stMarkdownContainer"] * {
+        color: #ffffff !important;
+    }
+    
+    /* 5. INPUT FIELDS CONTRAST: Keep choices INSIDE dropdowns, selection fields, and inputs dark gray */
     div[data-baseweb="select"] *, 
     div[role="listbox"] *, 
     .stSelectbox div, 
     input {
         color: #1e293b !important;
-    }
-
-    /* 5. Ensure radio button labels (Yes/No circles) stay white on the page */
-    div[data-testid="stMarkdownContainer"] p {
-        color: #ffffff !important;
     }
 </style>
 """, unsafe_allow_html=True)
