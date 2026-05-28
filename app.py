@@ -15,7 +15,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 # ============================================================
-# CUSTOM TEXT AND THEME VISIBILITY STYLING 
+# CUSTOM TEXT AND THEME VISIBILITY STYLING (REPLACE ENTIRELY)
 # ============================================================
 st.markdown("""
 <style>
@@ -29,9 +29,9 @@ st.markdown("""
         background-color: #0f172a !important;
     }
     
-    /* 3. Make main page and sidebar titles, labels, and paragraph text bright white */
-    .stApp p, .stApp label, .stApp span, .stApp h1, .stApp h2, .stApp h3, .stApp h4,
-    section[data-testid="stSidebar"] p, section[data-testid="stSidebar"] label, section[data-testid="stSidebar"] span {
+    /* 3. Make main page and sidebar titles, labels, paragraph text, AND bullet points bright white */
+    .stApp p, .stApp label, .stApp span, .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp li,
+    section[data-testid="stSidebar"] p, section[data-testid="stSidebar"] label, section[data-testid="stSidebar"] span, section[data-testid="stSidebar"] li {
         color: #ffffff !important;
     }
     
